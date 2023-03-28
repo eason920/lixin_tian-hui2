@@ -2,3 +2,31 @@ $bp-pc: 769px
 $bp-mb: 768px
 $cw: 500px
 $cwm: 50px
+
+$yellow: #EFAD2C
+
+$c_pink: #801E44
+
+@mixin swiperCustomDot
+  display: flex
+  li
+    cursor: pointer
+    width: 20px
+    height: 3px
+    background-color: #fff
+    margin-right: 10px
+    &.active
+      cursor: default
+      background: #CB5E0D
+
+%textShadow
+  text-shadow: 0 0 0.55em rgba(0,0,0,.5), 0 0 0.2em rgba(0,0,0,.8)
+
+
+%treeAni
+  animation: tree 4s infinite alternate
+  transform: skewX(-2deg)
+  transform-origin: 50% 100%
+  @keyframes tree
+    to
+      transform: skewX(2deg)

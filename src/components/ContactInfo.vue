@@ -1,32 +1,10 @@
 <template>
   <div>
     <div class="contact-info" id="contact-info">
-      <!-- <div class="absolute decor decor-5">
-        <img
-          class="decor-img"
-          src="@/projects/hpym/S9/logo.png"
-          alt=""
-          srcset=""
-        />
-        <img
-          class="decor-bg"
-          src="@/projects/hpym/decor/decor-e-bg.png"
-          alt=""
-          srcset=""
-        />
-      </div> -->
-      <!-- <img
-        v-if="!isMobile"
-        class="logo"
-        src="@/projects/hpym/S9/logo.png"
-        :alt="info.caseName"
-      />
-      <img
-        v-if="isMobile"
-        class="logo"
-        src="@/projects/hpym/S9/logo.png"
-        :alt="info.caseName"
-      /> -->
+      <img v-if="!isMobile" class="tree tree1" src="@/projects/tian-hui/house_info/tree1.png" />
+      <img v-if="!isMobile" class="tree tree2" src="@/projects/tian-hui/house_info/tree2.png" />
+      <butterfly1 v-if="!isMobile" class="butt butt"/>
+      <img class="logo" src="@/projects/tian-hui/house_info/logo.png" />
       <div class="info">
         <div class="btn flex-c" @click="showCallDialog">
           <span class="flex-c">
@@ -91,12 +69,14 @@ import { isMobile, isTablet } from '@/utils'
 import CallDialog from '@/components/Dialog/Call'
 import MessengerDialog from '@/components/Dialog/Messenger'
 import MapDialog from '@/components/Dialog/Map'
+import butterfly1 from '@/projects/tian-hui/butterfly1.vue'
 export default {
   name: 'contactInfo',
   components: {
     CallDialog,
     MessengerDialog,
-    MapDialog
+    MapDialog,
+    butterfly1
   },
   data() {
     return {
@@ -130,12 +110,12 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
-@import "@/projects/hpym/sass/share.sass";
+@import "@/projects/tian-hui/sass/share.sass";
 
 .contact-info {
   background: $contact_bg;
-  // background-image: url('../assets/img/contact_bg.jpg');/
-  background-size: cover;
+  background-size: 100% auto;
+  background-position: center bottom;
   //box-shadow: $contact_shadow;
   display: flex;
   flex-direction: column;
@@ -149,8 +129,8 @@ export default {
   background-attachment: fixed;
   background-position: 0% 50%; */
   transform: translateY(0);
-  margin: 2vw auto 2vw;
-  padding: 70px 0 30px;
+  margin: 2vw auto 0;
+  padding: 70px 0 60px;
 
   .decor-5 {
     width: 22vw;
@@ -166,11 +146,13 @@ export default {
 
 .logo {
   width: auto;
-  height: 210px;
+  height: 145px;
   margin: 0 auto;
   margin-bottom: 60px;
 }
 .info {
+  position: relative;
+  z-index: 1;
   width: 880px;
   margin: 0 auto;
   display: flex;
@@ -185,20 +167,28 @@ export default {
   margin-bottom: 20px;
   cursor: pointer;
   text-decoration: none;
-  color: #9FD9F6;
-  background: #d1b373;
+  color: #000;
   // box-shadow: $contact_btn_border;
   transition: all 0.5s;
   position: relative;
   overflow: hidden;
   border-radius: 0;
   font-family: $family4;
-
+  cursor: pointer;
+  background-color: #fff;
+  border: {
+    style: solid;
+    width: 1px;
+    color: #fff!important;
+  }
+  &:hover {
+    background-color: rgba(255,255,255,.5);
+  }
   &.half {
     width: 49%;
   }
   svg {
-    color: #9FD9F6;
+    color: #000;
     width: 24px;
     height: 24px;
     margin-right: 12px;
@@ -210,7 +200,7 @@ export default {
     // color: $contact_btn_hover_color;
 
     svg {
-      color: #9FD9F6;
+      color: #000;
     }
   }
   &::before {
@@ -233,17 +223,15 @@ export default {
     width: 90%;
     left: 140%;
   }
-  @include classicHover;
 }
 .address {
   width: 600px;
   height: 60px;
-  background: none;
+  background-color: #EDEDED;
   // box-shadow: $contact_btn_border;
   border-radius: 0;
-  border: 1px solid #9FD9F6;
   font-family: $family4;
-  color: #9FD9F6;
+  color: #000;
   + .google-btn,
   + .btn {
     border-radius: 0;
@@ -260,7 +248,8 @@ export default {
   color: #000;
   // background: #d1b373;
   background-position: center !important;
-  background-image: linear-gradient(180deg, #BDE5FF 0%, #83B9D5 47.92%, #002B43 100%);
+  background-color: #fff;
+  // background-image: linear-gradient(180deg, #BDE5FF 0%, #83B9D5 47.92%, #002B43 100%);
   // box-shadow: #d1b373;
   transition: all 0.5s;
 
@@ -272,14 +261,14 @@ export default {
     transition: all 0.5s;
   }
 
-  // &:hover {
-  //   background: $contact_google_hover_btn_bg;
-  //   color: $contact_google_hover_btn_color;
+  &:hover {
+    background: rgba(255,255,255,.5);
+    // color: $contact_google_hover_btn_color;
 
-  //   svg {
-  //     color: $contact_google_hover_btn_icon;
-  //   }
-  // }
+    svg {
+      // color: $contact_google_hover_btn_icon;
+    }
+  }
 }
 
 /* 平板尺寸 */
@@ -299,6 +288,7 @@ export default {
 /* 手機尺寸 */
 @media only screen and (max-width: 767px) {
   .contact-info {
+    background-image: none;
     display: flex;
     width: 100%;
     height: auto;
@@ -308,7 +298,7 @@ export default {
     margin: 0 auto 40px auto;
 
     .logo {
-      width: $contact_logo_mobile_width;
+      width: 55vw;
       height: auto;
     }
   }
@@ -346,7 +336,7 @@ export default {
 
   .logo {
     margin-bottom: 20px;
-    margin: 0 auto 30px;
+    margin: 20vw auto 10vw;
     left: auto;
     position: relative;
   }
@@ -371,4 +361,29 @@ export default {
     font-size: 14px;
   }
 }
+</style>
+
+<style lang="sass">
+@import "src/assets/style/myvar"
+@media screen and (min-width: $bp-pc)
+  .tree
+    position: absolute
+  .tree1
+    width: 25vw
+    left: 0
+    bottom: 0
+  .tree2
+    width: 10vw
+    right: 0
+    top: -8vw
+
+// butterfly
+.butt
+  position: absolute
+
+@media screen and (min-width: $bp-pc)
+  .butt
+    right: 9vw
+    bottom: 36vw
+    width: 4vw
 </style>

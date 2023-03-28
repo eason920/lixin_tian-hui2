@@ -1,5 +1,5 @@
 exports.info = {
-  title: '宏普陽明',
+  title: '天匯',
   description: '',
   keywords: ''
 }

@@ -2,7 +2,7 @@
   <div class="order-bg">
     <div class="order-top">
       <div class="title-block">
-        <h3 class="title" v-if="order.title" >{{ order.title }}</h3>
+        <h3 class="title" v-if="order.title" >預約賞屋</h3>
         <div class="subtitle" v-if="order.subTitle">{{ order.subTitle }}</div>
       </div>
       <div class="order">
@@ -16,9 +16,20 @@
               <label>手機</label>
               <el-input v-model="form.phone" placeholder></el-input>
             </div>
-            <div class="row">
+            <!-- <div class="row">
               <label>信箱</label>
               <el-input v-model="form.email" placeholder></el-input>
+            </div> -->
+            <div class="row">
+              <label>需求房型</label>
+              <el-select v-model="form.city" placeholder>
+                <el-option
+                  v-for="room in room"
+                  :key="room.value"
+                  :label="room.label"
+                  :value="room.value"
+                ></el-option>
+              </el-select>
             </div>
             <div class="row">
               <label>居住城市</label>
@@ -85,7 +96,7 @@
           :disabled="!checked || !isVerify"
           @click="submit"
           :loading="isSubmit"
-          >即刻預約 APPOINTMENT</el-button
+          >立即預約</el-button
         >
         <Loading :loading="isSubmit" :isOpacity="true" />
       </div>
@@ -123,9 +134,20 @@ export default {
       info,
       order: info.order,
       isMobile,
+      room: [
+        {
+          value: '2',
+          label: '二房'
+        },
+        {
+          value: '3',
+          label: '三房'
+        }
+      ],
       form: {
         name: '',
         phone: '',
+        room: '',
         email: '',
         city: '',
         area: '',
@@ -188,6 +210,7 @@ export default {
       const formData = new FormData()
       formData.append('name', this.form.name)
       formData.append('phone', this.form.phone)
+      formData.append('room', this.form.room)
       formData.append('email', this.form.email)
       formData.append('msg', this.form.msg)
       // formData.append('time_start', this.form.time_start)
@@ -259,11 +282,30 @@ export default {
      margin: 0 0 calc(100vw * 31 / 1920) 0;
     }
     .title {
-      color: #9FD9F6;
+      color: #fff;
       font-size: calc(100vw * 72 / 1920);
       font-family:'Times New Roman' !important;
       font-weight: 500;
+      margin: 0 auto;
+      position: relative;
+      width: 920px;
+      margin-bottom: 4vw
     }
+    // .title:before, .title:after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 50%;
+    //   height: 1px;
+    //   background-color: #fff;
+    //   width: 18vw;
+    //   max-width: 210px;
+    // }
+    // .title:before{
+    //   left: 0
+    // }
+    // .title:after{
+    //   right: 0
+    // }
     .subtitle {}
   }
 
@@ -289,7 +331,7 @@ export default {
   }
 
   .group {
-    height: 360px;
+    height: 350px;
     margin-bottom: 40px;
 
     &:nth-child(1) {
@@ -312,7 +354,8 @@ export default {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    border: solid 1px #9FD9F6;
+    background-color: #fff;
+    // border: solid 1px #fff;
     padding: 5px 5px 5px 15px;
     border-radius: 0;
 
@@ -329,7 +372,7 @@ export default {
       font-size: 16px;
       font-weight: 500;
       opacity: 0.8;
-      color: #9FD9F6;
+      color: #000;
       text-align: left;
       white-space: nowrap;
     }
@@ -388,8 +431,12 @@ export default {
       margin: 0 0 calc(100vw * 20 / 375) 0;
       }
       .title {
-      font-size: calc(100vw * 29 / 375);
+        font-size: calc(100vw * 29 / 375);
+        width: calc( 100% - 60px );
       }
+      // .title:before, .title:after {
+      //   width: calc( (100% - 60px - 175px)/2 )
+      // }
   }
     .order {
       width: calc(100% - 60px) !important;
@@ -435,7 +482,6 @@ export default {
     }
 
     .form-submit {
-      width: 100%!important;
       margin-top: 25px!important;
       margin-bottom: 5px!important
     }
