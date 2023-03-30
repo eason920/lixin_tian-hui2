@@ -34,7 +34,7 @@ export default {
 @import "@/assets/style/variableColor.scss";
 .house-info {
   background-color: #9B1E44;
-  width: 100vw;
+  width: 100%;
   // background: $house_bg;
   position: relative;
   z-index: 1;
@@ -120,7 +120,7 @@ export default {
   .title {
     font-size: 24px;
     margin: 40px 0 24px;
-    width: 100vw;
+    width: 100%;
   }
 
   .item {

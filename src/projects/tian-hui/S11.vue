@@ -51,7 +51,7 @@
             享受英式下午茶或烤肉野宴<br />
             不用出門在家就能開始度假
           </div>
-          <bird class="bird" />
+          <div class="bird"><bird /></div>
         </div>
         <ul class="dot11"
           v-if="hasSwiper"
@@ -188,10 +188,10 @@ export default {
     position: center
     size: cover
   &:nth-child(1), &:nth-child(3), &:nth-child(5)
-    background-image: url('./S11/1.png')
+    background-image: url('./S11/1.jpg')
 
   &:nth-child(2), &:nth-child(4), &:nth-child(6)
-    background-image: url('./S11/2.png')
+    background-image: url('./S11/2.jpg')
 
 // 總高
 @media screen and (min-width: $bp-pc)
@@ -199,7 +199,7 @@ export default {
   .swiper-wrapper,
   .swiper-slide,
   .item
-    height: 33vw
+    height: 100%
     // max-height: 70vh
 @media screen and (max-width: $bp-mb) and (orientation: portrait)
   .swiper-container,
@@ -238,6 +238,7 @@ export default {
 // -- by case customize
 // --------------------------------
 #sec11
+  overflow: hidden
 
 .boxp
 
@@ -275,6 +276,8 @@ export default {
 .boxt
   position: relative
   z-index: 1
+  font:
+    size: 22px
 
 $pl: 40px
 .deco
@@ -289,14 +292,11 @@ $pl: 40px
   color: $c_pink
   // margin: 20px 0 40px
   font:
-    size: 28px
+    size: 1.59em
     weight: bold
 
 .content
   color: #333
-  font:
-    size: 100vw * 18 / 1920
-    weibht: bold
   line-height: 1.5
   text-align: justify
 
@@ -313,14 +313,28 @@ $pl: 40px
   .title
     position: absolute
     left: 0
-    top: -2.5vw
+    top: 0
     width: 0
   .content
-    font-size: 100vw * 22 / 1920
+    // font-size: 100vw * 22 / 1920
+@media screen and (max-width: 1360px)  
+  .boxt
+    font:
+      size: 14px
+@media screen and (max-width: 960px)  
+  .boxp
+    height: 45vw
+  .boxt
+    height: 45vw
+    padding-left: 6vw
 
 @media screen and (max-width: $bp-mb)
+  .boxp
+    height: auto
   .boxt
-    margin: 18vw 8vw 0
+    margin: 10vw 6vw 0
+    height: auto
+    padding-left: 0
 
   .deco
     margin-bottom: 10vw
@@ -348,6 +362,8 @@ $pl: 40px
 .bird
   position: absolute
   z-index: 3
+  transform: scaleX(-1)
+  
 
 @media screen and (min-width: $bp-pc)
   .bird
@@ -355,9 +371,12 @@ $pl: 40px
     left: -3.5vw
     width: 6vw
 
+@media screen and (max-width: 960px)  
+  .bird
+    bottom: 11vw
 @media screen and (max-width: $bp-mb)
   .bird
-    transform: rotateY(180deg) !important
+    transform: scaleX(1)
     width: 33vw
     bottom: -50vw
     right: -14vw
@@ -366,11 +385,6 @@ $pl: 40px
 .single
   width: 100%
   height: 100%
-  background:
-    // color: red
-    image: url(./S6/1.png)
-    size: cover
-    position: center
 
 @media screen and (max-width: $bp-mb)
   .single

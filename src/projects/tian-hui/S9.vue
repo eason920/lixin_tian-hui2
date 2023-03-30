@@ -193,11 +193,12 @@ export default {
 // ====================================
 #sec9
   position: relative
+  overflow: hidden
 
 @media screen and (min-width: $bp-pc)
   $stickyH: 200px
   #sec9
-    width: 100vw
+    width: 100%
     height: calc(45vw + #{$stickyH} )
 @media screen and (max-width: $bp-mb)
   #sec9
@@ -209,7 +210,7 @@ export default {
 @media screen and (min-width: $bp-pc)
   .pic_pc
     background:
-      image: url( ./S9/bg.png)
+      image: url( ./S9/bg.jpg)
       size: cover
       position: 100% 100%
     position: absolute
@@ -223,16 +224,16 @@ export default {
   .pic_mb
     // height: calc(45vw + #{$stickyH} )
     background:
-      image: url( ./S9/bg.png)
+      image: url( ./S9/bg.jpg)
       size: cover
-      position: -55vw 100%
+      position: 78% 100%
 
 // ====================================
 // == msgBox
 // ====================================
 .msgBox
   color: #fff
-  text-align: left
+  text-align: justify
   h3
     font:
       weight: bold
@@ -272,7 +273,13 @@ export default {
         font:
           size: 12px
           weight: lighter
+
 @media screen and (min-width: $bp-pc)
+  .outerBox
+    position: absolute
+    width: 45vw
+    bottom: 3vw
+    left: 7vw
   .msgBox
     h3
   .tbox
@@ -304,12 +311,29 @@ export default {
         h6
           
         span
+
+@media screen and (max-width: 1160px) 
+  .tbox
+    width: 130%
+@media screen and (max-width: 960px)  
+  .outerBox
+    left: 3vw
+  .tbox
+    width: 140%
+  $wt1: 34%
+  $g: 0%
+  .tbox1
+    width: $wt1
+    transform: translateY(1.3vw)
+  .tbox2
+    width: calc( 100% - #{$g} - #{$wt1})
+    transform: translate(-1vw,1.5vw)
           
 
 @media screen and (max-width: $bp-mb)
   .msgBox
     color: #000
-    padding: 23vw 8vw 2vw
+    padding: 17vw 8vw 5vw
     display: flex
     flex-direction: column
     justify-content: flex-end
@@ -317,19 +341,23 @@ export default {
 
   .tbox
     flex-direction: column
+    width: auto
   .tbox1
+    width: auto
     h4
       margin: 4vw 0 2vw
       font-size: 17px
     span
       display: block
-      padding-right: 40vw
+      padding-right: 34vw
       font:
-        weight: bold
+        weight: lighter
       line-height: 1.4
   .tbox2
     color: #fff
-    margin-top: 15vw
+    margin-top: 25vw
+    width: auto
+    transform: translate(0)
     h5
       border-bottom: solid 1px #fff
       padding-bottom: 1.5vw
@@ -357,20 +385,9 @@ export default {
 @media screen and (max-width: $bp-mb)
   .sign
     right: 8vw
-    top: 61vw
+    top: 68vw
     width: 24vw
 
-// ====================================
-// == OUT BOX
-// ====================================
-.outerBox
-
-@media screen and (min-width: $bp-pc)
-  .outerBox
-    position: absolute
-    width: 45vw
-    bottom: 3vw
-    left: 7vw
 
 @media screen and (max-width: $bp-mb)
 
@@ -387,19 +404,19 @@ export default {
 .swiper-slide
   background-repeat: no-repeat
   &:nth-child(1), &:nth-child(6), &:nth-child(11)
-    background-image: url('./S9/1.png')
+    background-image: url('./S9/1.jpg')
 
   &:nth-child(2), &:nth-child(7), &:nth-child(12)
-    background-image: url('./S9/2.png')
+    background-image: url('./S9/2.jpg')
 
   &:nth-child(3), &:nth-child(8), &:nth-child(13)
-    background-image: url('./S9/3.png')
+    background-image: url('./S9/3.jpg')
 
   &:nth-child(4), &:nth-child(9), &:nth-child(14)
-    background-image: url('./S9/4.png')
+    background-image: url('./S9/4.jpg')
 
   &:nth-child(5), &:nth-child(10), &:nth-child(15)
-    background-image: url('./S9/5.png')
+    background-image: url('./S9/5.jpg')
 
 // W/H
 .switchBox

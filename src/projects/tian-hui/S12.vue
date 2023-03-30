@@ -187,13 +187,13 @@ export default {
     position: center
     size: cover
   &:nth-child(1), &:nth-child(4), &:nth-child(7)
-    background-image: url('./S12/1.png')
+    background-image: url('./S12/1.jpg')
 
   &:nth-child(2), &:nth-child(5), &:nth-child(8)
-    background-image: url('./S12/2.png')
+    background-image: url('./S12/2.jpg')
 
   &:nth-child(3), &:nth-child(6), &:nth-child(9)
-    background-image: url('./S12/3.png')
+    background-image: url('./S12/3.jpg')
 
 // 總高
 @media screen and (min-width: $bp-pc)
@@ -201,7 +201,7 @@ export default {
   .swiper-wrapper,
   .swiper-slide,
   .item
-    height: 33vw
+    height: 100%
     // max-height: 70vh
 @media screen and (max-width: $bp-mb) and (orientation: portrait)
   .swiper-container,
@@ -240,6 +240,7 @@ export default {
 // -- by case customize
 // --------------------------------
 #sec12
+  overflow: hidden
 
 .boxp
 
@@ -278,6 +279,8 @@ export default {
 .boxt
   position: relative
   z-index: 1
+  font:
+    size: 22px
 
 $pl: 40px
 .deco
@@ -294,14 +297,11 @@ $pl: 40px
   color: $c_pink
   // margin: 20px 0 40px
   font:
-    size: 28px
+    size: 1.59em
     weight: bold
 
 .content
   color: #333
-  font:
-    size: 100vw * 18 / 1920
-    weibht: bold
   line-height: 1.5
   text-align: justify
 
@@ -320,13 +320,23 @@ $pl: 40px
     width: 0
     position: absolute
     right: 0vw
-    top: -3vw
-  .content
-    font-size: 100vw * 22 / 1920
+    top: 0vw
+@media screen and (max-width: 1360px)  
+  .boxt
+    font:
+      size: 14px
+@media screen and (max-width: 980px)  
+  .boxt
+    height: 38vw
+  .boxp
+    height: 38vw
 
 @media screen and (max-width: $bp-mb)
+  .boxp
+    height: auto
   .boxt
     margin: 18vw 8vw 0
+    height: auto
 
   .deco
     margin-bottom: 10vw
@@ -361,6 +371,11 @@ $pl: 40px
     width: 8vw
     bottom: 4vw
     right: -4vw
+@media screen and (max-width: 960px)  
+  .t2
+    width: 8vw
+    bottom: 0vw
+    right: -4vw
 
 @media screen and (max-width: $bp-mb)
   .t2
@@ -373,10 +388,6 @@ $pl: 40px
   width: 100%
   height: 100%
   position: relative
-  background:
-    image: url(./S10/1.png)
-    size: cover
-    position: center
 .text_en
   position: absolute
   img

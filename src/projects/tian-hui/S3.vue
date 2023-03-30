@@ -1,8 +1,8 @@
 <template>
   <div class="relative">
     <section id="sec3">
-      <img v-if="isMobile" src="./S3/mb.png" />
-      <img v-else src="./S3/pc.png" />
+      <img v-if="isMobile" src="./S3/mb.jpg" />
+      <img v-else src="./S3/pc.jpg" />
       <div class="title"
         data-aos="fade-up"
         data-aos-duration="1200"
@@ -52,42 +52,50 @@ img
   background:
     color: rgba(148, 55, 85, .9)
   color: #fff
+  line-height: 1.45
+  text-align: justify
+  padding: 2.36em
+  font:
+    size: 22px
   h3
-    margin-bottom: .5vw
+    margin-bottom: 0.3em
     font:
       weight: bold
-      size: 21px
+      size: 1.59em
   p
     line-height: 1.4
-    font:
-      size: 14px
 .msg
   font-size: 14px
   color: #fff
-  text-shadow: 0 0 5px #000,0 0 5px #000, 0 0 5px #000
+  line-height: 1.5
+  text-shadow: 0 0 0.36em #000,0 0 0.5em #000
+  right: 1em
+  bottom: .5em
 
 @media screen and (min-width: $bp-pc)
   .title
-    padding: 2vw 2vw
     right: 0
-    bottom: 7vw
-    width: 29vw
-    text-align: left
-  .msg
-    right: 2vw
-    bottom: 2vw
+    bottom: 3.64em
+    width: 27.4em
+
+@media screen and (max-width: 1360px)
+  .title
+    font:
+      size: 14px
+
 @media screen and (max-width: $bp-mb)
   .title
-    padding: 10vw 8vw
-    right: 10vw
+    padding: 2.36em 2em
+    right: 0
+    left: 0
+    margin: auto
     top: 23vw
-    width: 80vw
+    width: 21em
+    font:
+      size: 100vw * 14 / 375
     h3
-      margin-bottom: 2.5vw
-      font-size: 6.5vw
-    p
-      text-align: left
+      font-size: 1.73em
+      text-align: center
   .msg
-    right: 4vw
-    bottom: 6vw
+    font-size: 12px
 </style>

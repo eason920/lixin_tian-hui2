@@ -3,7 +3,7 @@
     <section id="sec3">
       <div class="s3box" id="box3">
         <div class="s3pic">
-          <img v-if="isMobile" src="./S2/bg.jpg" class="basic" />
+          <img src="./S2/bg.png" class="basic" />
         </div>
       </div>
       <div class="s3msg"
@@ -52,6 +52,7 @@
   transform: translateY(-50%)
 #sec3
   // height: 100vh
+  overflow: hidden
 .s3box
 
 @media screen and (min-width: $bp-pc)
@@ -59,14 +60,19 @@
   .s3pic
     background:
       image: url(./S2/bg.jpg)
-      size: contain
-      position: 0 100%
+      size: cover
+      position: 50% 50%
       repeat: no-repeat
     font-size: 0
     position: relative
-    width: 100vw
+    width: 100%
     height: 56.25vw
     transition: .1s
+    .basic
+      width: 100%
+      height: 100%
+      object-fit: cover
+      
 
 @media screen and (max-width: $bp-mb)
   #sec3
@@ -81,6 +87,12 @@
   .s3pic
     position: relative
     height: 100%
+    .basic
+      background:
+        image: url(./S2/bg.jpg)
+        size: cover
+        position: 50% 50%
+        repeat: no-repeat
     img
       height: 100%
 

@@ -58,8 +58,8 @@
             data-aos-delay="0"
             >
             <img src="./all/tree1.png" />
-          </div>
           <butterfly3 class="butt b3"/>
+          </div>
         </div>
         <ul class="dot4"
           v-if="hasSwiper"
@@ -196,9 +196,6 @@ export default {
   &:nth-child(1), &:nth-child(3), &:nth-child(5)
     background-image: url('./S4/1.jpg')
 
-  &:nth-child(2), &:nth-child(4), &:nth-child(6)
-    background-image: url('./S4/2.jpg')
-
 // 總高
 @media screen and (min-width: $bp-pc)
   .swiper-container, // height 1
@@ -230,12 +227,12 @@ export default {
 .text
   font:
     size: 14px
-  line-height: 1.7
+  line-height: 1.5
   position: absolute
-  right: .5em
-  bottom: .3em
+  right: 1em
+  bottom: .5em
   color: #fff
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.5)
+  text-shadow: 0 0 0.36em #000,0 0 0.5em #000
 @media screen and (max-width: $bp-mb)
   .text
     font:
@@ -244,7 +241,7 @@ export default {
 // -- by case customize
 // --------------------------------
 #sec4
-
+  overflow: hidden
 .boxp
 
 .boxt
@@ -261,7 +258,7 @@ export default {
     float: right
   .boxt
     float: left
-    width: 35vw
+    // width: 35vw
     padding-left: 10vw
     justify-content: flex-end
     height: 100%
@@ -287,24 +284,23 @@ $pl: 40px
   // padding-left: $pl
   margin-bottom: 3vw
   position: relative
-  color: #fff
+  color: #333
   display: flex
   align-items: flex-start
   flex-direction: column
   text-align: left
+  font:
+    size: 22px
+  line-height: 1.45
 
 .title
   color: $c_pink
-  // margin: 20px 0 40px
+  margin-bottom: 0.3em
   font:
-    size: 28px
+    size: 1.59em
     weight: bold
 
 .content
-  color: #333
-  font:
-    size: 100vw * 18 / 1920
-    weibht: bold
   line-height: 1.5
   text-align: justify
 
@@ -321,28 +317,36 @@ $pl: 40px
     display: flex
     justify-content: center
     height: 100%
-  .title
-    margin-bottom: 1vw
-  .content
-    font-size: 100vw * 22 / 1920
 
   .bird
     right: 8.5vw
     top: 230px
     width: 5vw
-@media screen and (max-width: $bp-mb)
+
+@media screen and (max-width: 1360px)  
+  .deco
+    font:
+      size: 14px
+  .boxp
+    height: 36vw
   .boxt
-    margin: 18vw 8vw 0
+    height: 36vw
+@media screen and (max-width: $bp-mb)
+  .boxp
+    height: auto
+  .boxt
+    margin: 10vw 8vw 0
+    height: auto
 
   .deco
     margin-bottom: 10vw
+    font-size: 100vw * 14 / 375
 
   .title
     margin-bottom: 5vw
-    font-size: 23px
+    font:
+      size: 1.78em
 
-  .content
-    font-size: 100vw * 13 / 375
   .bird
     right: -5vw
     bottom: -1vw
@@ -386,13 +390,13 @@ $pl: 40px
 
 @media screen and (min-width: $bp-pc)
   .b3
-    left: 13vw
-    top: 23vw
+    left: -3vw
+    bottom: 7vw
     width: 2.5vw
 @media screen and (max-width: $bp-mb)
   .b3
-    right: 9vw
-    top: 18vw
+    right: 75vw
+    top: -4vw
     width: 9vw
 
 // single pic

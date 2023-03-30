@@ -8,7 +8,7 @@
   background-image: url('~@/assets/img/404-bg.png');
   background-size: cover;
   background-position: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 @media screen and (max-width: 767px) {

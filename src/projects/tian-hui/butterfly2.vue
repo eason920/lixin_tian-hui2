@@ -15,18 +15,14 @@
 
 <style lang='sass' scoped>
   @keyframes aniWave
-    0%
-      transform: translateY(-2px) scaleX(.7)
-    50%
-      transform: translateY(2px) scaleX(1)
-    100%
+    to
       transform: translateY(-2px) scaleX(.7)
 
   .wavw
     height: 100%
     width: 100%
-    transform: translateY(-5px)
-    animation: aniWave 6s infinite forwards
+    transform: translateY(2px) scaleX(1)
+    animation: aniWave 1s ease-in-out infinite alternate
     img
       width: 100%
 

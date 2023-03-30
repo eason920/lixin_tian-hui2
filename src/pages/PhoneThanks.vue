@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
 @import '@/assets/style/variableColor.scss';
 .thanks {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: $phone_thanks_bg;
   background-size: cover;

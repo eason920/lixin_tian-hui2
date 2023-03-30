@@ -13,7 +13,7 @@
 
 html,
 body {
-    overflow-x: hidden;
+   // overflow-x: hidden;
     *::-webkit-scrollbar {
         // display: none;
     }
@@ -38,12 +38,11 @@ body {
 }
 
 .home {
-    // background: $bg;
     padding-top: $nav_pc_height;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    overflow: hidden; //試底下多的那塊哪來的
+    //background-size: cover;
+    //background-position: top;
+    //background-repeat: no-repeat;
+    overflow: visible; //試底下多的那塊哪來的
 
     &.no-padding-top {
         padding-top: 0;

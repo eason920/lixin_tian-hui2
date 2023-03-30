@@ -247,7 +247,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/style/variableColor.scss';
 .bg-img {
-  width: 100vw;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -278,6 +278,9 @@ export default {
   .order-top {
     position: relative;
     overflow: hidden;
+    width: 920px;
+    max-width: 96%;
+    margin: auto;
     .title-block{
      margin: 0 0 calc(100vw * 31 / 1920) 0;
     }
@@ -285,10 +288,9 @@ export default {
       color: #fff;
       font-size: calc(100vw * 72 / 1920);
       font-family:'Times New Roman' !important;
-      font-weight: 500;
+      font-weight: 700;
       margin: 0 auto;
       position: relative;
-      width: 920px;
       margin-bottom: 4vw
     }
     // .title:before, .title:after {
@@ -310,7 +312,6 @@ export default {
   }
 
   .order {
-    width: 920px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -321,19 +322,20 @@ export default {
   .form {
     width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
     > .group {
       flex: 1;
-      align-items: flex-start;
+      align-items: stretch;
     }
   }
 
   .group {
-    height: 350px;
-    margin-bottom: 40px;
-
+    // height: 350px;
+    width: 50%;
+    margin: 0 auto 40px auto;
     &:nth-child(1) {
       // border-right: 1px solid rgba(0, 0, 0, 0.2);
       .row {
@@ -344,7 +346,7 @@ export default {
     &:nth-child(2) {
       .row {
         justify-content: flex-end;
-        align-items: flex-start;
+        align-items: stretch;
         height: 100%;
       }
     }
@@ -368,7 +370,8 @@ export default {
     }
 
     label {
-      width: 76px;
+      // width: 76px;
+      flex: 0 0 4.5em;
       font-size: 16px;
       font-weight: 500;
       opacity: 0.8;
@@ -381,19 +384,6 @@ export default {
   .control {
     margin-top: 0px;
     margin-bottom: 20px;
-  }
-}
-
-@media only screen and (min-device-width: 768px) {
-  .group {
-    &:nth-child(1) {
-      &:nth-child(1) {
-        padding-right: 50px;
-      }
-      &:nth-child(2) {
-        padding-left: 50px;
-      }
-    }
   }
 }
 
@@ -427,6 +417,7 @@ export default {
       display: block;
     }
     .order-top {
+      max-width: 100%;
       .title-block{
       margin: 0 0 calc(100vw * 20 / 375) 0;
       }
@@ -446,6 +437,7 @@ export default {
 
     .form {
       flex-direction: column;
+      gap: 0;
     }
 
     .group {

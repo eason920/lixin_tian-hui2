@@ -12,19 +12,19 @@ p {
 }
 
 h2 {
-    font-family: 'DFLiSongStd';
+    // font-family: 'DFLiSongStd';
     margin: 0;
     font-weight: normal;
 }
 h3,
 label {
-    font-family: Arial, 'Noto Serif TC', 'Noto Sans TC', sans-serif;
+    font-family: Arial, 'Noto Sans TC', sans-serif;
     margin: 0;
     //font-weight: bold;
 }
 
 p {
-    font-family: 'Noto Sans TC', serif;
+    font-family: 'Noto Sans TC', sans-serif;
     // font-family: '微軟正黑體', 'Microsoft JhengHei', 'Helvetica Neue', Helvetica,
     //   Arial;
     margin: 0;
@@ -33,6 +33,7 @@ p {
 /* animate css */
 
 /* font */
+/*
 @font-face {
     font-family: DFPingJuStd;
     src: url('~@/assets/font/DFPingJuStd-W7.otf?#iefix') format('embedded-opentype'),
@@ -58,3 +59,4 @@ p {
     font-weight: normal;
     font-style: normal;
 }
+*/

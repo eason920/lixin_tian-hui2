@@ -35,6 +35,14 @@
             data-aos-once="false"
           >
             方圓之內 食尚玩家
+        <div class="bird"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="0"
+          data-aos-once="false"
+        >
+          <img src="./S1/bird1.png" />
+        </div>
           </div>
           <div
             class="content"
@@ -48,14 +56,6 @@
             天母異國餐廳是美食饕客的味蕾饗宴<br/>
             還有各色拿手大饌小食都為生活增添好滋味<br/>
           </div>
-        </div>
-        <div class="bird"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="0"
-          data-aos-once="false"
-        >
-          <img src="./all/bird_pink.png" />
         </div>
         <ul class="dot5"
           data-aos="fade-up"
@@ -186,13 +186,13 @@ export default {
     position: center
     size: cover
   &:nth-child(1), &:nth-child(4), &:nth-child(7)
-    background-image: url('./S5/1.png')
+    background-image: url('./S5/1.jpg')
 
   &:nth-child(2), &:nth-child(5), &:nth-child(8)
-    background-image: url('./S5/2.png')
+    background-image: url('./S5/2.jpg')
 
   &:nth-child(3), &:nth-child(6), &:nth-child(9)
-    background-image: url('./S5/3.png')
+    background-image: url('./S5/3.jpg')
 
 // 總高
 @media screen and (min-width: $bp-pc)
@@ -200,7 +200,7 @@ export default {
   .swiper-wrapper,
   .swiper-slide,
   .item
-    height: 33vw
+    height: 100%
     // max-height: 70vh
 @media screen and (max-width: $bp-mb) and (orientation: portrait)
   .swiper-container,
@@ -225,12 +225,12 @@ export default {
 .text
   font:
     size: 14px
-  line-height: 1.7
+  line-height: 1.5
   position: absolute
-  right: .5em
-  bottom: .3em
+  right: 1em
+  bottom: .5em
   color: #fff
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.5)
+  text-shadow: 0 0 0.36em #000,0 0 0.5em #000
 @media screen and (max-width: $bp-mb)
   .text
     font:
@@ -257,9 +257,9 @@ export default {
     height: 33vw // w * 0.75 // height 2
     float: left
   .boxt
-    float: right
-    width: 35vw
-    padding-right: 10vw
+    // float: right
+    // width: 35vw
+    // padding-right: 10vw
     justify-content: flex-end
     height: 100%
     position: relative
@@ -278,35 +278,34 @@ export default {
 .boxt
   position: relative
   z-index: 1
+  font:
+    size: 22px
 
 $pl: 40px
 .deco
   // padding-left: $pl
-  margin-bottom: 40px
+  margin-bottom: 2em
   position: relative
   color: #fff
   display: flex
   align-items: flex-start
   flex-direction: column
   text-align: left
+  line-height: 1.45
+  width: 21em
+  margin: auto
 
 .title
   color: $c_pink
   // margin: 20px 0 40px
   font:
-    size: 28px
+    size: 1.59em
     weight: bold
 
 .content
   color: #333
-  font:
-    size: 100vw * 18 / 1920
-    weibht: bold
-  line-height: 1.5
-  text-align: justify
 
 .bird
-  position: absolute
   img
     width: 100%
 
@@ -320,43 +319,75 @@ $pl: 40px
     height: 100%
   .title
     position: absolute
-    width: 28px
+    width: 1em
     top: 0
     right: 0
+    line-height: 1.05
+
   .content
-    font-size: 100vw * 22 / 1920
+    // font-size: 100vw * 22 / 1920
 
   .bird
-    right: 8.5vw
-    top: 230px
-    width: 5vw
-@media screen and (max-width: $bp-mb)
+    width: 1.55em
+    float: right
+    margin: 
+      top: .5em
+@media screen and (max-width: 1490px)  
   .boxt
-    margin: 18vw 8vw 0
+    height: 36vw
+  .boxp
+    height: 36vw
+    width: 55vw
+@media screen and (max-width: 1360px)  
+  .boxt
+    font:
+      size: 14px
+    height: 32vw
+  .boxp
+    height: 32vw
+@media screen and (max-width: 980px)  
+  .boxt
+    height: 40vw
+  .boxp
+    height: 40vw
+    width: 53vw
+  
+@media screen and (max-width: $bp-mb)
+  .boxp
+    height: auto
+    width: 100%
+  .boxt
+    margin: 10vw 8vw 0
+    font-size: 100vw * 14 / 375
+    height: auto
 
   .deco
     margin-bottom: 4vw
+    margin: auto
+    width: 100%
 
   .title
     margin-bottom: 5vw
-    font-size: 23px
+    font:
+      size: 1.78em
 
   .content
-    font-size: 100vw * 13 / 375
   .bird
+    position: absolute
     right: -5vw
-    bottom: -1vw
-    width: 20vw
+    bottom: -21vw
+    width: 14vw
 // dot
 .dot5
   @include swiperCustomDot
 @media screen and (min-width: $bp-pc)
   .dot5
-    margin-bottom: 2vw
+    margin: .8em auto 1em auto
+    width: 21em
     // width: 100px
 @media screen and (max-width: $bp-mb)
   .dot5
-    margin-bottom: 12vw
+    margin: 1.5em auto 3em 0
 </style>
 
 <style lang="scss">

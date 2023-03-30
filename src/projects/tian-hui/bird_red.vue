@@ -5,7 +5,7 @@
     data-aos-duration="1000"
     data-aos-delay="0"
   >
-    <img class="bird" src="./all/bird_red.png" />
+    <img class="bird" src="./S1/bird2.png" />
   </div>
 </template>
 

@@ -19,6 +19,8 @@
     <vue-lazy-component class="section maskFixed addBg" id="section6" @init="init">
       <S6 />
     </vue-lazy-component>
+    <div class="relative section789">
+    <div class="sticky">帝寶團隊 巨匠建築</div>
     <vue-lazy-component class="section" id="section7" @init="init">
       <S7 />
     </vue-lazy-component>
@@ -28,6 +30,7 @@
     <vue-lazy-component class="section" id="section9" @init="init">
       <S9 />
     </vue-lazy-component>
+    </div>
     <vue-lazy-component class="section maskFixed addBg" id="section10" @init="init">
       <S10 />
     </vue-lazy-component>
@@ -40,7 +43,6 @@
     <vue-lazy-component class="section maskFixed" id="contact">
       <ContactSection />
     </vue-lazy-component>
-    <div class="fixed">帝寶團隊 巨匠建築</div>
     <!-- ======================== -->
     <MobileNav />
   </div>
@@ -131,47 +133,46 @@ export default {
 </script>
 
 <style lang="sass">
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC')
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC')
 @import "src/assets/style/myvar"
 *
-  font-family: "sans-serif" !important
+  font-family: Arial, 'Noto Sans TC', sans-serif
   letter-spacing: 1px
   // Noto Sans CJK TC  粗細Regular 400
   // Noto Serif CJK TC  粗細Regular 400  Bold 700
-.addBg
-  background:
-    position: top center
-    size: 100% auto
 section
   // overflow: visible
   position: relative
 
-@media screen and (min-width: $bp-pc)
-  .addBg
-    background:
-      image: url(../projects/tian-hui/S1/bg_pc.png)
-@media screen and (max-width: $bp-mb)
-  .addBg
-    background:
-      image: url(../projects/tian-hui/S1/bg_mb.png)
+.home
+  background:
+    image: url(../projects/tian-hui/S1/bg.jpg)
+    position: top center
+    size: auto auto
+    attachment: fixed
+
+
 
 // FIXED
-.fixed
+.section789
+.sticky
   background-color: rgba(23,23,23, .2)
+  backdrop-filter: blur(4px)
   color: #fff
   display: flex
   justify-content: center
   align-items: center
   width: 100%
   height: 70px
-  position: fixed
+  position: sticky
   left: 0
   top: 0
   font-size: 25px
   font-weight: bold
   letter-spacing: 3px
   z-index: 20
-
+#section7
+  margin: -70px 0 0 0
 .maskFixed
   position: relative
   z-index: 99

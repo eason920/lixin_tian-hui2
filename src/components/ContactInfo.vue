@@ -154,14 +154,17 @@ export default {
   position: relative;
   z-index: 1;
   width: 880px;
+  max-width: 96%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .btn {
-  width: 280px;
+ // width: 280px;
+  flex:1 200px;
   height: 60px;
   font-size: 16px;
   margin-bottom: 20px;
@@ -225,8 +228,9 @@ export default {
   }
 }
 .address {
-  width: 600px;
+  flex:2 400px;
   height: 60px;
+  margin: 0 -20px 0 0;
   background-color: #EDEDED;
   // box-shadow: $contact_btn_border;
   border-radius: 0;
@@ -239,7 +243,7 @@ export default {
   }
 }
 .google-btn {
-  width: 280px;
+  flex:1 200px;
   height: 60px;
   font-size: 16px;
   font-weight: 600;
@@ -295,7 +299,7 @@ export default {
     padding: 20px 30px 30px;
     transform: none;
     position: static;
-    margin: 0 auto 40px auto;
+    // margin: 0 auto 40px auto;
 
     .logo {
       width: 55vw;
@@ -312,7 +316,7 @@ export default {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: calc(50% - 5em);
+      left: calc(50% - 6em);
       margin-right: 0;
       + span {
         margin-left: 1.5em;
@@ -324,10 +328,11 @@ export default {
     width: 100%;
     justify-content: center;
     text-align: center;
+    gap: 0;
     //margin-bottom: 40px;
 
     > * {
-      margin-bottom: 26px;
+      // margin-bottom: 26px;
       &.address {
         margin-bottom: 0;
       }
@@ -348,6 +353,7 @@ export default {
     height: auto;
     line-height: 1.7;
     padding: 1em 1em;
+    margin: 0 0 0 0;
     + .google-btn,
     + .btn {
       border-radius: 0;

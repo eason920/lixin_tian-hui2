@@ -198,10 +198,10 @@ export default {
     position: center
     size: cover
   &:nth-child(1), &:nth-child(3), &:nth-child(5)
-    background-image: url('./S4/1.jpg')
+    // background-image: url('./S4/1.jpg')
 
   &:nth-child(2), &:nth-child(4), &:nth-child(6)
-    background-image: url('./S4/2.jpg')
+    // background-image: url('./S4/2.jpg')
 
 // 總高
 @media screen and (min-width: $bp-pc)
@@ -248,6 +248,7 @@ export default {
 // -- by case customize
 // --------------------------------
 #sec10
+  overflow: hidden
 
 .boxp
 
@@ -287,6 +288,8 @@ export default {
 .boxt
   position: relative
   z-index: 1
+  font:
+    size: 22px
 
 $pl: 40px
 .deco
@@ -303,14 +306,14 @@ $pl: 40px
   color: $c_pink
   // margin: 20px 0 40px
   font:
-    size: 28px
+    size: 1.59em
     weight: bold
 
 .content
   color: #333
-  font:
-    size: 100vw * 18 / 1920
-    weibht: bold
+  // font:
+    // size: 100vw * 18 / 1920
+    // weibht: bold
   line-height: 1.5
   text-align: justify
 
@@ -336,6 +339,10 @@ $pl: 40px
     right: 8.5vw
     top: 230px
     width: 5vw
+@media screen and (max-width: 1360px)  
+  .boxt
+    font:
+      size: 14px
 @media screen and (max-width: $bp-mb)
   .boxt
     margin: 18vw 8vw 0
@@ -399,7 +406,7 @@ $pl: 40px
   .butt
     right: 24vw
     top: -9vw
-    width: 12vw
+    width: 8vw
 
 // single pic
 .single
@@ -407,7 +414,7 @@ $pl: 40px
   height: 100%
   position: relative
   background:
-    image: url(./S10/1.png)
+    image: url(./S10/1.jpg)
     size: cover
     position: center
 .text_en

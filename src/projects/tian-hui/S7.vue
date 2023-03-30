@@ -169,11 +169,12 @@ export default {
 // ====================================
 #sec7
   position: relative
+  overflow: hidden
 
 @media screen and (min-width: $bp-pc)
   $stickyH: 200px
   #sec7
-    width: 100vw
+    width: 100%
     height: calc(45vw + #{$stickyH} )
 @media screen and (max-width: $bp-mb)
   #sec7
@@ -185,7 +186,7 @@ export default {
 @media screen and (min-width: $bp-pc)
   .pic_pc
     background:
-      image: url( ./S7/bg.png)
+      image: url( ./S7/bg.jpg)
       size: cover
       position: 100% 100%
     position: absolute
@@ -199,38 +200,41 @@ export default {
   .pic_mb
     // height: calc(45vw + #{$stickyH} )
     background:
-      image: url( ./S7/bg.png)
+      image: url( ./S7/bg.jpg)
       size: cover
-      position: -58vw 100%
+      position: -65vw 100%
 
 // ====================================
 // == msgBox
 // ====================================
 .msgBox
   color: #fff
-  text-align: left
+  text-align: justify
+  font:
+    size: 15px
+  line-height: 1.5
   h3
     font:
       weight: bold
-      size: 23px
+      size: 2.6em
 .tbox
   display: flex
 .tbox1
   h4
     font:
       weight: bold
-      size: 15px
+      size: 1.53em
   span
     font:
-      size: 12px
       weight: lighter
 .tbox2
   h5
     font:
       weight: bold
-      size: 13px
   ul
     margin-left: 20px
+    font:
+      size: 0.8em
     li
       position: relative
       padding-bottom: 8px
@@ -242,12 +246,10 @@ export default {
         
       h6
         font:
-          size: 12px
           wight: bold
       span
         font:
-          size: 12px
-          weight: lighter
+          weight: revert
 @media screen and (min-width: $bp-pc)
   .msgBox
     h3
@@ -262,7 +264,6 @@ export default {
       padding:
         top: 20px
         bottom: 8px
-    span
   $wh5: 35px
   .tbox2
     width: calc( 100% - #{$g} - #{$wt1})
@@ -281,10 +282,24 @@ export default {
         span
           
 
+@media screen and (max-width: 1160px)  
+  .tbox
+    width: 115%
+  $wt1: 45%
+  $g: 3%
+  .tbox1
+    width: $wt1
+  .tbox2
+    width: calc( 100% - #{$g} - #{$wt1})
+@media screen and (max-width: 960px)  
+  .msgBox
+    margin: 0 0 0 -15%
+
 @media screen and (max-width: $bp-mb)
   .msgBox
     color: #000
     padding: 30vw 8vw 2vw
+    margin: auto
     display: flex
     flex-direction: column
     justify-content: flex-end
@@ -292,17 +307,18 @@ export default {
 
   .tbox
     flex-direction: column
+    width: auto
   .tbox1
+    width: auto
     h4
       margin: 4vw 0 2vw
-      font-size: 17px
+      font-size: 15px
     span
       display: block
       padding-right: 32vw
-      font:
-        weight: bold
       line-height: 1.4
   .tbox2
+    width: auto
     color: #fff
     margin-top: 15vw
     h5
@@ -314,8 +330,6 @@ export default {
         display: none
         &:nth-child(1)
           display: block
-        h6
-        span
 // ====================================
 // == SIGN
 // ====================================
@@ -362,13 +376,13 @@ export default {
 .swiper-slide
   background-repeat: no-repeat
   &:nth-child(1), &:nth-child(4), &:nth-child(7)
-    background-image: url('./S7/1.png')
+    background-image: url('./S7/1.jpg')
 
   &:nth-child(2), &:nth-child(5), &:nth-child(8)
-    background-image: url('./S7/2.png')
+    background-image: url('./S7/2.jpg')
 
   &:nth-child(3), &:nth-child(6), &:nth-child(9)
-    background-image: url('./S7/3.png')
+    background-image: url('./S7/3.jpg')
 
 // W/H
 .switchBox
