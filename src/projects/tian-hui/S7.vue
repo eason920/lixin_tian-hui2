@@ -202,7 +202,7 @@ export default {
     background:
       image: url( ./S7/bg.jpg)
       size: cover
-      position: -65vw 100%
+      position: 79% 100%
 
 // ====================================
 // == msgBox
@@ -264,7 +264,7 @@ export default {
       padding:
         top: 20px
         bottom: 8px
-  $wh5: 35px
+  $wh5: 3em
   .tbox2
     width: calc( 100% - #{$g} - #{$wt1})
     display: flex
@@ -274,14 +274,15 @@ export default {
       border-right: solid 1px #fff
       padding-right: 3px
       margin-right: 5px
-    ul
-      width: calc( 100% - #{$wh5})
-      li
-        h6
-          
-        span
-          
+      text-align: left
 
+    ul
+      width: calc( 100% - #{$wh5} - 5px)
+          
+@media screen and (max-width: 1730px)  
+  .msgBox
+    font:
+      size: 15 * 100vw / 1920
 @media screen and (max-width: 1160px)  
   .tbox
     width: 115%
@@ -303,7 +304,12 @@ export default {
     display: flex
     flex-direction: column
     justify-content: flex-end
+    font:
+      size: 12 * 100vw / 375
     h3
+      font:
+        size: 1.8em
+
 
   .tbox
     flex-direction: column
@@ -311,8 +317,9 @@ export default {
   .tbox1
     width: auto
     h4
-      margin: 4vw 0 2vw
-      font-size: 15px
+      margin: 2vw 0 2vw
+      font:
+        size: 1.15em
     span
       display: block
       padding-right: 32vw
@@ -346,7 +353,7 @@ export default {
 @media screen and (max-width: $bp-mb)
   .sign
     right: 21vw
-    top: 72vw
+    top: 81vw
     width: 21vw
 
 // ====================================

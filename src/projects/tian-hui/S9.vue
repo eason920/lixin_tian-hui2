@@ -234,28 +234,31 @@ export default {
 .msgBox
   color: #fff
   text-align: justify
+  font:
+    size: 15px
+  line-height: 1.5
   h3
     font:
       weight: bold
-      size: 23px
+      size: 2.6em
 .tbox
   display: flex
 .tbox1
   h4
     font:
       weight: bold
-      size: 15px
+      size: 1.53em
   span
     font:
-      size: 12px
       weight: lighter
 .tbox2
   h5
     font:
       weight: bold
-      size: 13px
   ul
     margin-left: 20px
+    font:
+      size: 0.8em
     li
       position: relative
       padding-bottom: 8px
@@ -267,11 +270,9 @@ export default {
         
       h6
         font:
-          size: 12px
           wight: bold
       span
         font:
-          size: 12px
           weight: lighter
 
 @media screen and (min-width: $bp-pc)
@@ -294,7 +295,7 @@ export default {
         top: 20px
         bottom: 8px
     span
-  $wh5: 35px
+  $wh5: 3em
   .tbox2
     width: calc( 100% - #{$g} - #{$wt1})
     display: flex
@@ -305,12 +306,13 @@ export default {
       border-right: solid 1px #fff
       padding-right: 3px
       margin-right: 5px
+      text-align: left
     ul
-      width: calc( 100% - #{$wh5})
-      li
-        h6
-          
-        span
+      width: calc( 100% - #{$wh5} - 5px)
+@media screen and (max-width: 1730px)  
+  .msgBox
+    font:
+      size: 15 * 100vw / 1920
 
 @media screen and (max-width: 1160px) 
   .tbox
@@ -327,7 +329,7 @@ export default {
     transform: translateY(1.3vw)
   .tbox2
     width: calc( 100% - #{$g} - #{$wt1})
-    transform: translate(-1vw,1.5vw)
+    transform: translate(1vw,1.5vw)
           
 
 @media screen and (max-width: $bp-mb)
@@ -337,7 +339,11 @@ export default {
     display: flex
     flex-direction: column
     justify-content: flex-end
+    font:
+      size: 12 * 100vw / 375
     h3
+      font:
+        size: 1.8em
 
   .tbox
     flex-direction: column
@@ -345,13 +351,12 @@ export default {
   .tbox1
     width: auto
     h4
-      margin: 4vw 0 2vw
-      font-size: 17px
+      margin: 0vw 0 2vw
+      font:
+        size: 1.15em
     span
       display: block
       padding-right: 34vw
-      font:
-        weight: lighter
       line-height: 1.4
   .tbox2
     color: #fff
