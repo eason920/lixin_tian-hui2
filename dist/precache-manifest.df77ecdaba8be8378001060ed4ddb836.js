@@ -8,12 +8,12 @@ self.__precacheManifest = [
     "url": "/lixin_tian-hui2/dist/js/about.0bb92cc9.js"
   },
   {
-    "revision": "b0b41df87996fe88c99d",
-    "url": "/lixin_tian-hui2/dist/css/app.5305c63f.css"
+    "revision": "b81de97c07fbc0da3b32",
+    "url": "/lixin_tian-hui2/dist/css/app.b0e78182.css"
   },
   {
-    "revision": "b0b41df87996fe88c99d",
-    "url": "/lixin_tian-hui2/dist/js/app.cd5f8a3c.js"
+    "revision": "b81de97c07fbc0da3b32",
+    "url": "/lixin_tian-hui2/dist/js/app.647b644b.js"
   },
   {
     "revision": "80af3faf6f5f7cc84e97",
@@ -108,16 +108,16 @@ self.__precacheManifest = [
     "url": "/lixin_tian-hui2/dist/img/thank_bg.2f9f61b4.png"
   },
   {
-    "revision": "d8b42a5127aa009af02f61eb8272c692",
-    "url": "/lixin_tian-hui2/dist/img/bg.d8b42a51.jpg"
+    "revision": "20cc7a435b2d952d871989d82fdf94db",
+    "url": "/lixin_tian-hui2/dist/img/2.20cc7a43.jpg"
   },
   {
     "revision": "4b0cb66dead1a604ca729eeb1f2c2410",
     "url": "/lixin_tian-hui2/dist/img/1.4b0cb66d.jpg"
   },
   {
-    "revision": "20cc7a435b2d952d871989d82fdf94db",
-    "url": "/lixin_tian-hui2/dist/img/2.20cc7a43.jpg"
+    "revision": "d8b42a5127aa009af02f61eb8272c692",
+    "url": "/lixin_tian-hui2/dist/img/bg.d8b42a51.jpg"
   },
   {
     "revision": "923e6b071e8c3c7900b23361fc59ceb2",
@@ -132,60 +132,16 @@ self.__precacheManifest = [
     "url": "/lixin_tian-hui2/dist/img/1.18154695.jpg"
   },
   {
-    "revision": "cacbd6cecb009d37b48fbaf818756ad3",
-    "url": "/lixin_tian-hui2/dist/img/bg.cacbd6ce.jpg"
-  },
-  {
-    "revision": "9b9bcc1e84b84bb6ed7c3da1dc378d84",
-    "url": "/lixin_tian-hui2/dist/img/1.9b9bcc1e.jpg"
-  },
-  {
-    "revision": "eae1d53ce7f6bdc132bfb6c7339123f1",
-    "url": "/lixin_tian-hui2/dist/img/2.eae1d53c.jpg"
-  },
-  {
-    "revision": "ef2967229fd1f9d4fb8c1db6f1dd48ff",
-    "url": "/lixin_tian-hui2/dist/img/3.ef296722.jpg"
-  },
-  {
-    "revision": "c184de169e42973cc313e8d63bbd8dbf",
-    "url": "/lixin_tian-hui2/dist/img/4.c184de16.jpg"
+    "revision": "ce22d73c1572426dc8f6ecccdcfcf0c5",
+    "url": "/lixin_tian-hui2/dist/img/2.ce22d73c.jpg"
   },
   {
     "revision": "c10774c872d055383bbfbcd9dbcb6ad3",
     "url": "/lixin_tian-hui2/dist/img/1.c10774c8.jpg"
   },
   {
-    "revision": "ce22d73c1572426dc8f6ecccdcfcf0c5",
-    "url": "/lixin_tian-hui2/dist/img/2.ce22d73c.jpg"
-  },
-  {
     "revision": "eb39e70f8fd34e079c6ddf64d789ce2b",
     "url": "/lixin_tian-hui2/dist/img/3.eb39e70f.jpg"
-  },
-  {
-    "revision": "dd99cb792285ec160c992b13b9fee49d",
-    "url": "/lixin_tian-hui2/dist/img/bg.dd99cb79.jpg"
-  },
-  {
-    "revision": "acd36b69755457b15e720dbbfcd76dcf",
-    "url": "/lixin_tian-hui2/dist/img/2.acd36b69.jpg"
-  },
-  {
-    "revision": "9a1f9ae822f6d8d896f18c0d6afbdafc",
-    "url": "/lixin_tian-hui2/dist/img/1.9a1f9ae8.jpg"
-  },
-  {
-    "revision": "0182e93ddf165f6b1ea661c242aed9dd",
-    "url": "/lixin_tian-hui2/dist/img/3.0182e93d.jpg"
-  },
-  {
-    "revision": "61c2fe0dc0eaeaf9639be1cae498ea29",
-    "url": "/lixin_tian-hui2/dist/img/5.61c2fe0d.jpg"
-  },
-  {
-    "revision": "1b12f0f39dc6c35b7f357bfa54e3bcf9",
-    "url": "/lixin_tian-hui2/dist/img/4.1b12f0f3.jpg"
   },
   {
     "revision": "03763a8cf52cc3e5d894478379830a01",
@@ -220,8 +176,52 @@ self.__precacheManifest = [
     "url": "/lixin_tian-hui2/dist/img/404-bg.a72458d2.png"
   },
   {
+    "revision": "dd99cb792285ec160c992b13b9fee49d",
+    "url": "/lixin_tian-hui2/dist/img/bg.dd99cb79.jpg"
+  },
+  {
+    "revision": "9a1f9ae822f6d8d896f18c0d6afbdafc",
+    "url": "/lixin_tian-hui2/dist/img/1.9a1f9ae8.jpg"
+  },
+  {
+    "revision": "61c2fe0dc0eaeaf9639be1cae498ea29",
+    "url": "/lixin_tian-hui2/dist/img/5.61c2fe0d.jpg"
+  },
+  {
+    "revision": "acd36b69755457b15e720dbbfcd76dcf",
+    "url": "/lixin_tian-hui2/dist/img/2.acd36b69.jpg"
+  },
+  {
+    "revision": "0182e93ddf165f6b1ea661c242aed9dd",
+    "url": "/lixin_tian-hui2/dist/img/3.0182e93d.jpg"
+  },
+  {
+    "revision": "1b12f0f39dc6c35b7f357bfa54e3bcf9",
+    "url": "/lixin_tian-hui2/dist/img/4.1b12f0f3.jpg"
+  },
+  {
     "revision": "08a2b2f2e12e69cbbf4a07c2c037b7cf",
     "url": "/lixin_tian-hui2/dist/img/mb.08a2b2f2.jpg"
+  },
+  {
+    "revision": "cacbd6cecb009d37b48fbaf818756ad3",
+    "url": "/lixin_tian-hui2/dist/img/bg.cacbd6ce.jpg"
+  },
+  {
+    "revision": "9b9bcc1e84b84bb6ed7c3da1dc378d84",
+    "url": "/lixin_tian-hui2/dist/img/1.9b9bcc1e.jpg"
+  },
+  {
+    "revision": "ef2967229fd1f9d4fb8c1db6f1dd48ff",
+    "url": "/lixin_tian-hui2/dist/img/3.ef296722.jpg"
+  },
+  {
+    "revision": "eae1d53ce7f6bdc132bfb6c7339123f1",
+    "url": "/lixin_tian-hui2/dist/img/2.eae1d53c.jpg"
+  },
+  {
+    "revision": "c184de169e42973cc313e8d63bbd8dbf",
+    "url": "/lixin_tian-hui2/dist/img/4.c184de16.jpg"
   },
   {
     "revision": "471bf6584e09186ad9280f1fd70a3148",
@@ -236,10 +236,6 @@ self.__precacheManifest = [
     "url": "/lixin_tian-hui2/dist/img/logo.ba89cbd3.png"
   },
   {
-    "revision": "b1f46b4f6ea548b8ab2e349d3c6260ef",
-    "url": "/lixin_tian-hui2/dist/img/3.b1f46b4f.jpg"
-  },
-  {
     "revision": "8ff38bc62fc45f7fb648e319baea35f1",
     "url": "/lixin_tian-hui2/dist/img/1.8ff38bc6.jpg"
   },
@@ -248,11 +244,15 @@ self.__precacheManifest = [
     "url": "/lixin_tian-hui2/dist/img/2.677c80f8.jpg"
   },
   {
+    "revision": "b1f46b4f6ea548b8ab2e349d3c6260ef",
+    "url": "/lixin_tian-hui2/dist/img/3.b1f46b4f.jpg"
+  },
+  {
     "revision": "90119446e2c9cbe9bcb4997198aaed7a",
     "url": "/lixin_tian-hui2/dist/img/tree2.90119446.png"
   },
   {
-    "revision": "d11dc4ace30714b3e8a35c86d10b8dc4",
+    "revision": "e1b12bfdf16033227381f1f7a80ef007",
     "url": "/lixin_tian-hui2/dist/index.html"
   },
   {
