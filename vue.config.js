@@ -7,7 +7,7 @@ function resolve(dir) {
 }
 
 module.exports = {
-  // publicPath: process.env.NODE_ENV === 'production' ? '/' : '/', // for php
+  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/', // for php
   publicPath: process.env.NODE_ENV === 'production' ? '/lixin_tian-hui2/dist/' : '/', // for github
   configureWebpack: {
     resolve: {
