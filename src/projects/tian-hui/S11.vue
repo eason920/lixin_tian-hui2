@@ -61,7 +61,7 @@
           data-aos-once="false"
         >
           <li
-            v-for="item in 2"
+            v-for="item in 3"
             :key="'dot11' + item"
             @click="fnDotChange(item)"
           ></li>
@@ -101,7 +101,8 @@ export default {
       isTablet,
       swipList: [
         '禮賓大廳3D示意圖',
-        '禮賓大廳3D示意圖',
+        '健身房3D示意圖',
+        '交誼廳3D示意圖',
       ],
       swiperOptions11: {
         slidesPerView: 1,
@@ -127,8 +128,8 @@ export default {
           slideChangeTransitionStart: function() {
             let eq = this.activeIndex
             // console.log(eq)
-            if (eq >= 2) {
-              eq = eq - 2
+            if (eq >= 3) {
+              eq = eq - 3
             }
             // console.log(eq) // 切換啟動前，告訴我現在是第幾個slide
             $('.dot11 li')
@@ -151,8 +152,8 @@ export default {
     fnDotChange(i) {
       let eq = i - 1
       // console.log(eq)
-      if (eq >= 2) {
-        eq = eq - 2
+      if (eq >= 3) {
+        eq = eq - 3
       }
       // console.log(eq)
       this.$refs.swipers11.$swiper.slideTo(eq)
@@ -187,11 +188,26 @@ export default {
   background:
     position: center
     size: cover
-  &:nth-child(1), &:nth-child(3), &:nth-child(5)
+  &:nth-child(1), &:nth-child(4), &:nth-child(7)
     background-image: url('./S11/1.jpg')
 
-  &:nth-child(2), &:nth-child(4), &:nth-child(6)
+  &:nth-child(2), &:nth-child(5), &:nth-child(8)
     background-image: url('./S11/2.jpg')
+
+  &:nth-child(3), &:nth-child(6), &:nth-child(9)
+    background-image: url('./S11/3.jpg')
+
+@media screen and (max-width: $bp-mb)
+  .swiper-slide
+    &:nth-child(1), &:nth-child(4), &:nth-child(7)
+      background-image: url('./S11/1m.jpg')
+
+    &:nth-child(2), &:nth-child(5), &:nth-child(8)
+      background-image: url('./S11/2m.jpg')
+
+    &:nth-child(3), &:nth-child(6), &:nth-child(9)
+      background-image: url('./S11/3m.jpg')
+
 
 // 總高
 @media screen and (min-width: $bp-pc)
