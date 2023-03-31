@@ -100,10 +100,26 @@ export default {
       isMobile,
       isTablet,
       swipList: [
-        '禮賓大廳3D示意圖',
-        '健身房3D示意圖',
         '交誼廳3D示意圖',
+        '健身房3D示意圖',
+        '禮賓大廳3D示意圖',
       ],
+      /* 
+      slideList: [
+        {
+          img: require('./S11/1m.jpg'),
+          name: '禮賓大廳3D示意圖',
+        },
+        {
+          img: require('./S11/2m.jpg'),
+          name: '交誼廳3D示意圖',
+        },
+        {
+          img: require('./S11/1m.jpg'),
+          name: '健身房3D示意圖',
+        },
+      ],
+      */
       swiperOptions11: {
         slidesPerView: 1,
         loop: true, // 是否 slide 後循環
