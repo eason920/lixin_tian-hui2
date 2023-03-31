@@ -226,7 +226,7 @@ export default {
       size: 1.53em
   span
     font:
-      weight: lighter
+      weight: revert
 .tbox2
   h5
     font:

@@ -37,9 +37,9 @@
     <vue-lazy-component class="section maskFixed addBg" id="section11" @init="init">
       <S11 />
     </vue-lazy-component>
-    <vue-lazy-component class="section maskFixed addBg" id="section12" @init="init">
+    <!-- <vue-lazy-component class="section maskFixed addBg" id="section12" @init="init">
       <S12 />
-    </vue-lazy-component>
+    </vue-lazy-component>  -->
     <vue-lazy-component class="section maskFixed" id="contact">
       <ContactSection />
     </vue-lazy-component>
@@ -69,7 +69,7 @@ import S8 from '@/projects/tian-hui/S8.vue'
 import S9 from '@/projects/tian-hui/S9.vue'
 import S10 from '@/projects/tian-hui/S10.vue'
 import S11 from '@/projects/tian-hui/S11.vue'
-import S12 from '@/projects/tian-hui/S12.vue'
+// import S12 from '@/projects/tian-hui/S12.vue'
 
 export default {
   name: 'home',
@@ -91,7 +91,7 @@ export default {
     S9,
     S10,
     S11,
-    S12
+    // S12
   },
 
   data() {

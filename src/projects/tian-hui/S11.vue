@@ -100,8 +100,8 @@ export default {
       isMobile,
       isTablet,
       swipList: [
-        '2禮賓大廳3D示意圖',
-        '1禮賓大廳3D示意圖',
+        '禮賓大廳3D示意圖',
+        '禮賓大廳3D示意圖',
       ],
       swiperOptions11: {
         slidesPerView: 1,

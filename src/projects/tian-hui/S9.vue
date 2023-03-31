@@ -26,7 +26,7 @@
               data-aos="fade-up"
               data-aos-delay="200"
               data-aos-duration="800"
-              >門廳公設｜門廳公設</h4>
+              >門廳公設｜近境制作</h4>
               <div
                 data-aos-once="false"
                 data-aos="fade-up"
@@ -100,7 +100,7 @@ export default {
       workShipList: [
         {
           title: '',
-          msg: 'Andrew Martin國際室內設計大 獎得主'
+          msg: 'Andrew Martin國際室內設計大獎得主'
         },
         {
           title: '',
@@ -250,7 +250,7 @@ export default {
       size: 1.53em
   span
     font:
-      weight: lighter
+      weight: revert
 .tbox2
   h5
     font:
