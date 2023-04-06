@@ -19,7 +19,7 @@
             <!-- <div class="row">
               <label>信箱</label>
               <el-input v-model="form.email" placeholder></el-input>
-            </div> -->
+            </div>
             <div class="row">
               <label>需求房型</label>
               <el-select v-model="form.city" placeholder>
@@ -29,6 +29,15 @@
                   :label="room.label"
                   :value="room.value"
                 ></el-option>
+              </el-select>
+            </div> -->
+            <div class="row" v-if="order.room_type">
+              <label>需求房型</label>
+              <el-select v-model="form.room_type" placeholder>
+                <el-option v-for="city in order.room_type" 
+                :key="city" 
+                :label="city" 
+                :value="city" no-data-text=""></el-option>
               </el-select>
             </div>
             <div class="row">
@@ -134,20 +143,10 @@ export default {
       info,
       order: info.order,
       isMobile,
-      room: [
-        {
-          value: '2',
-          label: '二房'
-        },
-        {
-          value: '3',
-          label: '三房'
-        }
-      ],
       form: {
         name: '',
         phone: '',
-        room: '',
+        room_type: '',
         email: '',
         city: '',
         area: '',
@@ -210,7 +209,7 @@ export default {
       const formData = new FormData()
       formData.append('name', this.form.name)
       formData.append('phone', this.form.phone)
-      formData.append('room', this.form.room)
+      formData.append("room_type", this.form.room_type)
       formData.append('email', this.form.email)
       formData.append('msg', this.form.msg)
       // formData.append('time_start', this.form.time_start)
@@ -229,7 +228,13 @@ export default {
       const min = time.getMinutes()
       const sec = time.getSeconds()
       const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`
-
+      fetch(
+        `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${this.form.name}&phone=${this.form.phone}&email=${this.form.email}&cityarea=${this.form.city}${this.form.area}&msg=${this.form.msg}&room_type=${this.form.room_type}&utm_source=${utmSource}&utm_medium=${utmMedium}&utm_content=${utmContent}&utm_campaign=${utmCampaign}&date=${date}&campaign_name=${info.caseName}
+      `,
+        {
+          method: "GET",
+        }
+      )
       fetch('contact-form.php', {
         method: 'POST',
         body: formData

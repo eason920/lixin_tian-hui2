@@ -25,6 +25,7 @@ export default {
   recaptcha_user_token: '6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa',
   order: {
     title: 'CONTACT US',
-    subTitle: ''
+    subTitle: '',
+    room_type: ['二房','三房'],//房型
   }
 }
